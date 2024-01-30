@@ -1,0 +1,18 @@
+import { useLoaderData } from "@remix-run/react";
+import { loader } from "~/page-components/{{name}}/loader";
+
+export const use{{pascalCase name}}Page = () => {
+  const data = useLoaderData<typeof loader>();
+  return { data };
+};
+
+if (process.env.NODE_ENV === "test" && import.meta.vitest) {
+  const { renderHook } = await import("@testing-library/react");
+
+  describe("use{{pascalCase name}}Page", () => {
+    it("初期状態", async () => {
+      const { result } = renderHook(() => use{{pascalCase name}}Page());
+      expect(result.current).toStrictEqual({});
+    });
+  });
+}
