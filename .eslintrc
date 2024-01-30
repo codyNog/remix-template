@@ -48,7 +48,7 @@
         "src/**/*.stories.**",
         "*.config.ts",
         "plopfile.js",
-        "app/**/*.tsx"
+        "app/**/*.tsx",
       ],
       "rules": {
         "import/no-default-export": "off"

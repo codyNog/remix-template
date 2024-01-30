@@ -9,7 +9,7 @@
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
     "lint": "run-p lint:*",
-    "lint:script": "eslint --max-warnings=0 './src/**/*.tsx' './src/**/*.ts'",
+    "lint:script": "eslint --max-warnings=0 './app/**/*.tsx' './src/**/*.tsx' './src/**/*.ts'",
     "lint:format": "prettier --check ./src",
     "lint:markdown": "markdownlint-cli2 '**/*.md' !node_modules",
     "lint:markup": "markuplint -p src/**/*.tsx",
